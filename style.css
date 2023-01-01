@@ -1,0 +1,160 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+
+ul[role='list'],
+ol[role='list'] {
+list-style: none;
+}
+
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+display: block;
+}
+
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+html:focus-within {
+    scroll-behavior: auto;
+}
+*,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+}
+}
+
+
+/* CUSTOM PROPERTIES */
+:root {
+    --font-size: 16px;
+    --font-w400: 400;
+    --font-w700: 700;
+    --f-inter: 'Inter', sans-serif;
+    --accent-color: #6943FF;
+    --bg-color: #F4F4F4;
+    --title: #ffffff;
+    --subtitle: #5A537B;
+    --p-text: #353535;
+    --margin-bottom: 1.5rem;
+
+}
+
+body {
+    background-color: var(--bg-color);
+}
+.header {
+    background-color: var(--accent-color);
+    text-align: center;
+    padding: 1.5rem 0;
+    font-family: var(--f-inter);
+    margin-bottom: var(--margin-bottom);
+}
+.header>*{
+    margin-left: auto;
+    margin-right: auto;
+}
+h1 {
+    font-weight: var(--font-w700);
+    color: var(--title);
+    font-size: 2rem;
+    margin-bottom: var(--margin-bottom);
+}
+.input {
+    display: inline-block;
+    min-width: 7rem;
+    padding: 0 1rem;
+    font-size: 3rem;
+    color: var(--title);
+    font-family: var(--f-inter);
+    font-weight: var(--font-w700);
+    border-radius: 7px;
+    background-color: var(--accent-color);
+    border: rgb(199, 199, 199) 2px solid;
+    margin-bottom: var(--margin-bottom);
+}
+.convert-btn {
+    display: block;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--title);
+    border: none;
+    border-radius: 8px;
+    color: #4b4464;
+    font-weight: 500;
+    letter-spacing: .05rem;
+}
+.convert-btn:hover {
+    transform: scale(0.95);
+    cursor: pointer;
+}
+.box {
+    text-align: center;
+    margin-bottom: var(--margin-bottom);
+    font-family: var(--f-inter);
+    background-color: var(--title);
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem 0;
+}
+.box h2 {
+    color: var(--subtitle);
+    margin-bottom: .5rem;
+}
+.box p {
+    color: var(--p-text);
+}
